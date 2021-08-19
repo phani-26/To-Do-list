@@ -66,6 +66,7 @@
     z-index: 1;
     float:right;
     width:auto;
+  display:none;
   }
 
   #nav{
