@@ -1,0 +1,148 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#container {
+  width: 50vw;
+  min-width: 350px;
+  min-height: 350px;
+  height: 60vh;
+  background-color: #D4D6DD;
+  margin-top: 0px;
+  position: relative;
+  margin: 0px;
+}
+
+#inner-container {
+  width: 80%;
+  min-height: 45%;
+  display: flex;
+  flex-grow: unset;
+  position: absolute;
+  border-radius: 15px;
+  background-color: #F5FcF8;
+}
+
+#text-box {
+  height: 10vh;
+  border-radius: 5px;
+  width: 90%;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #DAD4DA;
+  display: flex;
+}
+
+
+#main-box{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-width: 0px;;
+    position: absolute;
+    left:0px;
+    top:0px;
+    background-color: #DAD4DA;
+    z-index: 1;
+    font-weight: 900;
+    font-size: large;
+}
+
+#inner-container img {
+    display: flex;
+    flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  left:5px;
+  top:5px;
+  height: 8vh;
+  width:15%;
+}
+
+.add {
+    position: absolute;
+    z-index: 1;
+    float:right;
+    width:auto;
+  }
+
+  #nav{
+   height: 10%;
+   width:90%;
+   position: absolute;
+  }
+
+  #items{
+      position: absolute;
+      width:90%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      height: auto;
+      box-sizing: border-box;
+      padding-top: 0.5vh;
+  }
+  #items div{
+      flex: 1 0 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      height:6vh ;
+      width:100%;
+      font-size: larger;
+      font-weight: 700;
+  }
+ #items div>div{
+     display: flex;
+     flex: 1 1 80%;
+     justify-content: left;
+     width:60%;
+     
+ }
+
+ #items div i{
+      float:right;
+      cursor:pointer;
+  }
+
+  #del{
+      display:none;
+  }
+
+  #items div:hover > #del{
+   display: block;
+  }
+
+  #nav{
+      padding: 1vh 0px 1vh 0px;
+      width:90%;
+      border-bottom: 1px solid #D4D6DD;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+  }
+  #nav div, #nav span {
+      color:#D4D6DD;
+  }
+
+  #nav i, #nav span{
+      cursor: pointer;
+  }
+
+  #footer{
+      display: flex;
+      margin-top:auto;
+      position: absolute;
+      height:2vh;
+      justify-content: space-between;
+      width: 90%;
+      padding: 1.5vh 0px 1.5vh 0px;
+      border-top: 1px solid #D4D6DD;
+
+  }
+  #footer div span{
+    cursor:pointer;
+  }
