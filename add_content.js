@@ -9,8 +9,7 @@ function innerCon_pos() {
   c1.style.left = c.offsetWidth / 2 - c1.offsetWidth / 2 + 'px';
   c1.style.top = c.offsetHeight / 2 - c1.offsetHeight / 2 + 'px';
 }
-
-$('.add').click(function () {
+function addFunction() {
   var h = $('#items').height();
   $('#items').append('<div>' +
     '<div>' +
@@ -48,11 +47,33 @@ $('.add').click(function () {
     });
     return;
   }
-});
+}
+
+$('.add').click(addFunction);
 
 $('#items').on('click', 'i', function () {
   console.log($(this).attr('id'));
-  if ($(this).attr('id') == 'del')
+  if ($(this).attr('id') == 'del'){
+    if(!$(this).parent().find('div>input').attr('checked')){
+      $('#count').html(parseInt($('#count').html()) - 1);
+    }
     $(this).parent().remove();
+  }
 
+});
+
+$('#main-box').on('keyup',function(event){
+ if(event.keyCode>=33 && event.keyCode <=126){
+   $('.add').css('display','block');
+ }
+ if(event.keyCode == 8 && $(this).val()==""){
+  $('.add').css('display','none');
+
+ }
+ if(event.keyCode == 13 && $(this).val()!=""){
+   addFunction.call($('.add'));
+   $(this).val("");
+   $('.add').css('display','none');
+
+ }
 });
